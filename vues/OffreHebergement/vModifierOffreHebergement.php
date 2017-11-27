@@ -1,4 +1,4 @@
-<?
+<?php
 include("_debut.inc.php");
 
 // MODIFIER LES OFFRES DE L'ÉTABLISSEMENT SÉLECTIONNÉ

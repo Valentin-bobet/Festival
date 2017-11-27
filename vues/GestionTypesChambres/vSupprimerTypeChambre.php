@@ -1,4 +1,4 @@
-<?
+<?php
 include("_debut.inc.php");
 
 // SUPPRIMER LE TYPE DE CHAMBRE SÉLECTIONNÉ

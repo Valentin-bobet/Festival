@@ -1,4 +1,4 @@
-<?
+<?php
 include("_debut.inc.php");
 
 // CONSULTER LES OFFRES DE TOUS LES ÉTABLISSEMENTS

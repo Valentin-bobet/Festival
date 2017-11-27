@@ -1,4 +1,4 @@
-<?
+<?php
 
 // On récupère l'adresseRue de la page
 $URL =  $_SERVER['PHP_SELF'] . "?" .  $_SERVER['QUERY_STRING'];

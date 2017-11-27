@@ -1,4 +1,4 @@
-<?
+<?php
 
 include("_gestionErreurs.inc.php");
 include("gestionDonnees/_gestionBaseFonctionsCommunes.inc.php");

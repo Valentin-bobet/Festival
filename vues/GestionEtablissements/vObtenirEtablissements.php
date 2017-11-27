@@ -1,4 +1,4 @@
-<?
+<?php
 include("_debut.inc.php");
 
 // AFFICHER L'ENSEMBLE DES ÉTABLISSEMENTS

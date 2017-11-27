@@ -1,4 +1,4 @@
-<?
+<?php
 include("_debut.inc.php");
 
 // EFFECTUER OU MODIFIER LES ATTRIBUTIONS POUR L'ENSEMBLE DES ÉTABLISSEMENTS

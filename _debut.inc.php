@@ -23,15 +23,15 @@
          <td>
          <!-- On inclut le fichier de gestion des onglets ; si on a des 
          menus traditionnels, il faudra inclure le fichier adéquat -->
-         <? include("_onglets.inc.php"); ?>
+         <?php include("_onglets.inc.php"); ?>
          
          <div id='barreMenus'>
          <ul class='menus'>
-         <?construireMenu("Accueil","index.php",1);?>
-         <?construireMenu("Gestion établissements","cGestionEtablissements.php",2);?>
-         <?construireMenu("Gestion types chambres","cGestionTypesChambres.php",3);?>
-         <?construireMenu("Offre hébergement","cOffreHebergement.php",4);?>
-         <?construireMenu("Attribution chambres","cAttributionChambres.php",5);?>
+         <?php construireMenu("Accueil","index.php",1);?>
+         <?php construireMenu("Gestion établissements","cGestionEtablissements.php",2);?>
+         <?php construireMenu("Gestion types chambres","cGestionTypesChambres.php",3);?>
+         <?php construireMenu("Offre hébergement","cOffreHebergement.php",4);?>
+         <?php construireMenu("Attribution chambres","cAttributionChambres.php",5);?>
          </ul>
          </div>
          

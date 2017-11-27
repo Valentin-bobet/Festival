@@ -1,4 +1,4 @@
-<?
+<?php
 include("_debut.inc.php");
 
 // OBTENIR LE DÉTAIL DE L'ÉTABLISSEMENT SÉLECTIONNÉ

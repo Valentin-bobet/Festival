@@ -1,4 +1,12 @@
-<?
+<?php
+
+require ('config/Configuration.php');
+
+$config = new Configuration;
+
+$config->load('config.php');
+
+echo  $config->get('database.hostname');
 
 // FONCTIONS DE GESTION DES ÉTABLISSEMENTS
 
@@ -31,10 +39,11 @@ function obtenirReqIdEtablissementsOffrantChambres()
 
 function obtenirDetailEtablissement($id)
 {
-   $hote="localhost";
-   $login="festival";
-   $mdp="secret";
-   $bd="festival";
+   global $config;
+   $hote= $config->get('database.hostname');
+   $login= $config->get('database.login');
+   $mdp= $config->get('database.password');
+   $bd= $config->get('database.name');
    $connexion=mysql_connect($hote,$login,$mdp);
    if ($connexion)
    {
@@ -56,10 +65,11 @@ function obtenirDetailEtablissement($id)
 
 function supprimerEtablissement($id)
 {
-   $hote="localhost";
-   $login="festival";
-   $mdp="secret";
-   $bd="festival";
+   global $config;
+   $hote= $config->get('database.hostname');
+   $login= $config->get('database.login');
+   $mdp= $config->get('database.password');
+   $bd= $config->get('database.name');
    $connexion=mysql_connect($hote,$login,$mdp);
    if ($connexion)
    {
@@ -85,11 +95,12 @@ function creerModifierEtablissement($mode, $id, $nom, $adresseRue, $codePostal,
                                     $ville, $tel, $adresseElectronique, $type, 
                                     $civiliteResponsable, $nomResponsable, 
                                     $prenomResponsable)
-{  
-   $hote="localhost";
-   $login="festival";
-   $mdp="secret";
-   $bd="festival";
+{
+    global $config;
+    $hote= $config->get('database.hostname');
+    $login= $config->get('database.login');
+    $mdp= $config->get('database.password');
+    $bd= $config->get('database.name');
    $connexion=mysql_connect($hote,$login,$mdp);
    if ($connexion)
    {
@@ -134,10 +145,11 @@ function creerModifierEtablissement($mode, $id, $nom, $adresseRue, $codePostal,
 
 function estUnIdEtablissement($id)
 {
-   $hote="localhost";
-   $login="festival";
-   $mdp="secret";
-   $bd="festival";
+    global $config;
+    $hote= $config->get('database.hostname');
+    $login= $config->get('database.login');
+    $mdp= $config->get('database.password');
+    $bd= $config->get('database.name');
    $connexion=mysql_connect($hote,$login,$mdp);
    if ($connexion)
    {
@@ -161,10 +173,11 @@ function estUnIdEtablissement($id)
 
 function estUnNomEtablissement($mode, $id, $nom)
 {
-   $hote="localhost";
-   $login="festival";
-   $mdp="secret";
-   $bd="festival";
+    global $config;
+    $hote= $config->get('database.hostname');
+    $login= $config->get('database.login');
+    $mdp= $config->get('database.password');
+    $bd= $config->get('database.name');
    $connexion=mysql_connect($hote,$login,$mdp);
    if ($connexion)
    {
@@ -198,10 +211,11 @@ function estUnNomEtablissement($mode, $id, $nom)
 
 function obtenirNbEtab()
 {
-   $hote="localhost";
-   $login="festival";
-   $mdp="secret";
-   $bd="festival";
+    global $config;
+    $hote= $config->get('database.hostname');
+    $login= $config->get('database.login');
+    $mdp= $config->get('database.password');
+    $bd= $config->get('database.name');
    $connexion=mysql_connect($hote,$login,$mdp);
    if ($connexion)
    {
@@ -225,10 +239,11 @@ function obtenirNbEtab()
 
 function obtenirNbEtabOffrantChambres()
 {
-   $hote="localhost";
-   $login="festival";
-   $mdp="secret";
-   $bd="festival";
+    global $config;
+    $hote= $config->get('database.hostname');
+    $login= $config->get('database.login');
+    $mdp= $config->get('database.password');
+    $bd= $config->get('database.name');
    $connexion=mysql_connect($hote,$login,$mdp);
    if ($connexion)
    {
@@ -273,10 +288,11 @@ function obtenirReqLibelleTypesChambres()
 
 function obtenirLibelleTypeChambre($id)
 {
-   $hote="localhost";
-   $login="festival";
-   $mdp="secret";
-   $bd="festival";
+    global $config;
+    $hote= $config->get('database.hostname');
+    $login= $config->get('database.login');
+    $mdp= $config->get('database.password');
+    $bd= $config->get('database.name');
    $connexion=mysql_connect($hote,$login,$mdp);
    if ($connexion)
    {
@@ -301,10 +317,11 @@ function obtenirLibelleTypeChambre($id)
 
 function obtenirNbTypesChambres()
 {
-   $hote="localhost";
-   $login="festival";
-   $mdp="secret";
-   $bd="festival";
+    global $config;
+    $hote= $config->get('database.hostname');
+    $login= $config->get('database.login');
+    $mdp= $config->get('database.password');
+    $bd= $config->get('database.name');
    $connexion=mysql_connect($hote,$login,$mdp);
    if ($connexion)
    {
@@ -329,10 +346,11 @@ function obtenirNbTypesChambres()
 
 function supprimerTypeChambre($id)
 {
-   $hote="localhost";
-   $login="festival";
-   $mdp="secret";
-   $bd="festival";
+    global $config;
+    $hote= $config->get('database.hostname');
+    $login= $config->get('database.login');
+    $mdp= $config->get('database.password');
+    $bd= $config->get('database.name');
    $connexion=mysql_connect($hote,$login,$mdp);
    if ($connexion)
    {
@@ -354,10 +372,11 @@ function supprimerTypeChambre($id)
 
 function obtenirDetailTypeChambre($id)
 {
-   $hote="localhost";
-   $login="festival";
-   $mdp="secret";
-   $bd="festival";
+    global $config;
+    $hote= $config->get('database.hostname');
+    $login= $config->get('database.login');
+    $mdp= $config->get('database.password');
+    $bd= $config->get('database.name');
    $connexion=mysql_connect($hote,$login,$mdp);
    if ($connexion)
    {
@@ -381,10 +400,11 @@ function obtenirDetailTypeChambre($id)
 
 function creerModifierTypeChambre($mode, $id, $libelle)
 {
-   $hote="localhost";
-   $login="festival";
-   $mdp="secret";
-   $bd="festival";
+    global $config;
+    $hote= $config->get('database.hostname');
+    $login= $config->get('database.login');
+    $mdp= $config->get('database.password');
+    $bd= $config->get('database.name');
    $connexion=mysql_connect($hote,$login,$mdp);
    if ($connexion)
    {
@@ -417,10 +437,11 @@ function creerModifierTypeChambre($mode, $id, $libelle)
 
 function estUnIdTypeChambre($id)
 {
-   $hote="localhost";
-   $login="festival";
-   $mdp="secret";
-   $bd="festival";
+    global $config;
+    $hote= $config->get('database.hostname');
+    $login= $config->get('database.login');
+    $mdp= $config->get('database.password');
+    $bd= $config->get('database.name');
    $connexion=mysql_connect($hote,$login,$mdp);
    if ($connexion)
    {
@@ -443,10 +464,11 @@ function estUnIdTypeChambre($id)
 
 function estUnLibelleTypeChambre($mode, $id, $libelle)
 {
-   $hote="localhost";
-   $login="festival";
-   $mdp="secret";
-   $bd="festival";
+    global $config;
+    $hote= $config->get('database.hostname');
+    $login= $config->get('database.login');
+    $mdp= $config->get('database.password');
+    $bd= $config->get('database.name');
    $connexion=mysql_connect($hote,$login,$mdp);
    if ($connexion)
    {
@@ -489,10 +511,11 @@ function obtenirReqIdNomGroupesAHeberger()
 
 function obtenirNomGroupe($id)
 {
-   $hote="localhost";
-   $login="festival";
-   $mdp="secret";
-   $bd="festival";
+    global $config;
+    $hote= $config->get('database.hostname');
+    $login= $config->get('database.login');
+    $mdp= $config->get('database.password');
+    $bd= $config->get('database.name');
    $connexion=mysql_connect($hote,$login,$mdp);
    if ($connexion)
    {
@@ -521,10 +544,11 @@ function obtenirNomGroupe($id)
 // étab et à l'id type chambre transmis
 function modifierOffreHebergement($idEtab,$idTypeChambre,$nbChambresDemandees)
 {
-   $hote="localhost";
-   $login="festival";
-   $mdp="secret";
-   $bd="festival";
+    global $config;
+    $hote= $config->get('database.hostname');
+    $login= $config->get('database.login');
+    $mdp= $config->get('database.password');
+    $bd= $config->get('database.name');
    $connexion=mysql_connect($hote,$login,$mdp);
    if ($connexion)
    {
@@ -564,10 +588,11 @@ function modifierOffreHebergement($idEtab,$idTypeChambre,$nbChambresDemandees)
 // transmis
 function obtenirNbOffre($idEtab, $idTypeChambre)
 {
-   $hote="localhost";
-   $login="festival";
-   $mdp="secret";
-   $bd="festival";
+    global $config;
+    $hote= $config->get('database.hostname');
+    $login= $config->get('database.login');
+    $mdp= $config->get('database.password');
+    $bd= $config->get('database.name');
    $connexion=mysql_connect($hote,$login,$mdp);
    if ($connexion)
    {
@@ -607,10 +632,11 @@ function estModifOffreCorrecte($idEtab,$idTypeChambre,$nombreChambres)
 // Teste la présence d'attributions pour l'établissement transmis    
 function existeAttributionsEtab($id)
 {
-   $hote="localhost";
-   $login="festival";
-   $mdp="secret";
-   $bd="festival";
+    global $config;
+    $hote= $config->get('database.hostname');
+    $login= $config->get('database.login');
+    $mdp= $config->get('database.password');
+    $bd= $config->get('database.name');
    $connexion=mysql_connect($hote,$login,$mdp);
    if ($connexion)
    {
@@ -634,10 +660,11 @@ function existeAttributionsEtab($id)
 // Teste la présence d'attributions pour le type de chambre transmis 
 function existeAttributionsTypeChambre($id)
 {
-   $hote="localhost";
-   $login="festival";
-   $mdp="secret";
-   $bd="festival";
+    global $config;
+    $hote= $config->get('database.hostname');
+    $login= $config->get('database.login');
+    $mdp= $config->get('database.password');
+    $bd= $config->get('database.name');
    $connexion=mysql_connect($hote,$login,$mdp);
    if ($connexion)
    {
@@ -662,10 +689,11 @@ function existeAttributionsTypeChambre($id)
 // transmis
 function obtenirNbOccup($idEtab, $idTypeChambre)
 {
-   $hote="localhost";
-   $login="festival";
-   $mdp="secret";
-   $bd="festival";
+    global $config;
+    $hote= $config->get('database.hostname');
+    $login= $config->get('database.login');
+    $mdp= $config->get('database.password');
+    $bd= $config->get('database.name');
    $connexion=mysql_connect($hote,$login,$mdp);
    if ($connexion)
    {

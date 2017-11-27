@@ -1,4 +1,4 @@
-<?
+<?php
 include("_debut.inc.php");
 
 // CRÉER OU MODIFIER UN ÉTABLISSEMENT 

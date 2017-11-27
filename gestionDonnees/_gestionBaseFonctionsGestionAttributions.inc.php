@@ -1,4 +1,10 @@
-<?
+<?php
+
+//require ('config/Configuration.php');
+
+//$config = new Configuration;
+
+$config->load('config.php');
 
 // FONCTIONS UTILISÉES UNIQUEMENT DANS LA GESTION DES ATTRIBUTIONS
 
@@ -6,10 +12,11 @@
 // l'id étab, à l'id type chambre et à l'id groupe transmis
 function modifierAttribChamb($idEtab,$idTypeChambre,$idGroupe,$nbChambres)
 {
-   $hote="localhost";
-   $login="festival";
-   $mdp="secret";
-   $bd="festival";
+    global $config;
+    $hote= $config->get('database.hostname');
+    $login= $config->get('database.login');
+    $mdp= $config->get('database.password');
+    $bd= $config->get('database.name');
    $connexion=mysql_connect($hote,$login,$mdp);
    if ($connexion)
    {
@@ -77,10 +84,11 @@ function obtenirNbDispo($idEtab, $idTypeChambre)
 // et l'id type chambre transmis
 function obtenirNbOccupGroupe($idEtab, $idTypeChambre, $idGroupe)
 {
-   $hote="localhost";
-   $login="festival";
-   $mdp="secret";
-   $bd="festival";
+    global $config;
+    $hote= $config->get('database.hostname');
+    $login= $config->get('database.login');
+    $mdp= $config->get('database.password');
+    $bd= $config->get('database.name');
    $connexion=mysql_connect($hote,$login,$mdp);
    if ($connexion)
    {

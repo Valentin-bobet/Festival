@@ -1,4 +1,4 @@
-<?
+<?php
 include("_debut.inc.php");
 
 // SÉLECTIONNER LE NOMBRE DE CHAMBRES SOUHAITÉES

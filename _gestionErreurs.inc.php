@@ -1,4 +1,4 @@
-<?
+<?php
 
 // Si la valeur transmise ne contient pas d'autres caractères que des chiffres, 
 // la fonction retourne vrai
